@@ -1,0 +1,230 @@
+ /1. Universal Selector (*)/
+   /Selects all HTML elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 2. Element Selector
+   Selects all elements with the specified tag name */
+
+h1 {
+    color: darkblue;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: pink;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+p {
+    
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+/* 3. ID Selector (#)
+   Selects an element with a specific ID */
+#heading {
+    background-color: lightblue;
+    padding: 15px;
+    border: 2px solid blue;
+}
+
+
+
+/* 4. Class Selector (.)
+   Selects all elements belonging to a class */
+.demo {
+    color: green;
+    font-weight: bold;
+    background-color: lightgreen;
+    padding: 8px;
+}
+
+/* 5. Grouping Selector (,)
+   Applies the same styles to multiple selectors */
+h3, button, a {
+    font-family: Arial;
+    color: purple;
+}
+/* 6. Descendant Selector (Space)
+   Selects all p elements inside div at any depth */
+.container p {
+    color: red;
+    background-color: lightyellow;
+    padding: 8px;
+}
+/* 7. Child Selector (>)
+   Selects only direct p children of div */
+.container > p {
+    color: blue;
+    font-weight: bold;
+}
+/* 8. Adjacent Sibling Selector (+)
+   Selects only the first p immediately after h3 */
+h3 + p {
+    color: red;
+    font-weight: bold;
+}
+/* 9. General Sibling Selector (~)
+   Selects all p elements that are siblings of h3 */  
+h3 ~ p {
+    background-color: lightgoldenrodyellow;
+}
+/5.3 ATTRIBUTE SELECTORS/
+
+/* Selects input having exact type="text" */
+input[type="text"] {
+    background-color: lightyellow;
+    padding: 8px;
+}
+
+/* Selects input having exact type="password" */
+input[type="password"] {
+    background-color: lightblue;
+    padding: 8px;
+}
+
+/* Selects input having exact type="email" */
+input[type="email"] {
+    background-color: lightgreen;
+    padding: 8px;
+}
+
+/* Selects elements having a specified attribute */
+input[placeholder] {
+    border: 2px solid gray;
+}
+
+/* Selects target attribute values beginning with a value */
+a[target^="_"] {
+    text-decoration: none;
+}
+
+/* Selects href values ending with a specified text */
+a[href$="com"] {
+    font-weight: bold;
+}
+
+/* Selects attribute values containing specified text */
+input[type*="pass"] {
+    border-radius: 5px;
+}
+/* ==================================================
+   5.4 PSEUDO-CLASS SELECTORS
+   ================================================== */
+
+/* :hover
+   Applies style when mouse moves over button */
+button:hover {
+    background-color: orange;
+    color: white;
+}
+
+/* :active
+   Applies style while button is being clicked */
+button:active {
+    background-color: red;
+}
+
+/* :focus
+   Applies style when input receives focus */
+input:focus {
+    outline: 2px solid blue;
+    background-color: lightyellow;
+}
+
+/* :first-child
+   Selects the first child of its parent */
+li:first-child {
+    color: red;
+    font-weight: bold;
+}
+
+/* :last-child
+   Selects the last child of its parent */
+li:last-child {
+    color: blue;
+}
+
+/* :nth-child(n)
+   Selects a child based on its position */
+li:nth-child(2) {
+    background-color: lightgreen;
+}
+
+/* :checked
+   Selects checked checkbox elements */
+input:checked {
+    accent-color: green;
+}
+
+/* :disabled
+   Selects disabled input elements */
+input:disabled {
+    background-color: gray;
+    color: white;
+}
+
+/* :not()
+   Selects inputs that are not checkboxes */
+input:not([type="checkbox"]) {
+    border-radius: 4px;
+}
+/* ::first-letter
+   Styles the first letter of paragraph */
+.pseudo::first-letter {
+    font-size: 30px;
+    color: red;
+    font-weight: bold;
+}
+
+/* ::first-line
+   Styles the first line of paragraph */
+.pseudo::first-line {
+    color: blue;
+}
+/* ::before
+   Inserts content before heading content */
+.after::before {
+    content: "★ ";
+    color: orange;
+}
+/* ::after
+   Inserts content after heading content */
+.after::after {
+    content: "!";
+    color: red;
+}
+
+/* ::selection
+   Styles text selected by the user */
+::selection {
+    background-color: yellow;
+    color: rgb(0, 255, 136);
+}
+
+/* Element selector - lowest specificity */
+p {
+    color: blue;
+}
+
+/* Class selector - higher than element selector */
+.text {
+    color: green;
+}
+
+/* ID selector - higher than class selector */
+#para {
+    color: red;
+}
+
+
+
+
+  
