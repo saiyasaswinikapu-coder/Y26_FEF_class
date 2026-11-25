@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+           display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            align-content: space-around;
+            gap: 15px;
+            height: 350px;
+            background-color: lightgray;
+            padding: 15px;
+        }
+        .box {
+flex: 1 1 150px;
+background-color: steelblue;
+color: white;
+padding: 25px;
+text-align: center;
+font-size: 20px;
+        }
+        /* Order Property */
+.box2 {
+    order: 1;
+}
+
+.box1 {
+    order: 2;
+}
+/* Align Self Property */
+.box3 {
+align-self: flex-start;
+}
+
+
+    </style>
+</head>
+<body>
+    <h2>Student Skills Using Flexbox</h2>
+<div class="container">
+<div class="box box1">HTML</div>
+<div class="box box2">CSS</div>
+<div class="box box3">JavaScript</div>
+<div class="box box4">Python</div>
+</div>
+
+</body>
+</html>
