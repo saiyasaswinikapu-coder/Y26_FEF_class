@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title style="color: plum;">GRID DISPLAY</title>
+    <style>
+        .container
+        {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: 80px 3fr 60px;
+            grid-template-areas: "header header" "sidebar main" "footer footer";
+            gap:15px;
+            min min-height: 500px;
+
+        }
+        .header
+        {
+            grid-area: header;
+            background-color: aquamarine;
+            color:black;
+            padding:20px;
+            text-align: center;
+
+        }
+        .sidebar
+        {
+            grid-area: sidebar;
+            background-color:bisque;
+            padding:20px;
+        }
+        .main
+        {
+            grid-area: ;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">college dashboard</header>
+        <aside class="sidebar">
+        <h3>menu</h3>
+        <p>home</p>
+        <p>students</p>
+        <p>courses</p>
+        <p>reports</p>
+        </aside>
+        <main class="main">
+            <h2>Dashboard info</h2>
+            <div class="cards">
+                <div class="card">Students</div>
+                <div class="card">Faculty</div>
+                <div class="card">Results</div>
+                <div class="card featured">overall performance</div>
+            </div>
+        </main>
+        <footer class="footer">
+            college dashboard footer
+        </footer>
+    </div>
+    
+</body>
+</html>
